@@ -1,0 +1,49 @@
+Create a very light backend website for a log tracker that looks like a microblogging site consisting of gallery of projects and gallery of blogs within each project.
+
+Pages:
+	Project Gallery -> contains multiple projects (grid style)
+	Blog Gallery -> contains multiple blogs specific to a project (grid style)
+	Profile -> very simple where users can change their passwords, usernames, and icons
+
+Project attributes
+	name
+	description
+	date created
+	members who has access
+	tags (allowed tags in project)
+
+Blog attributes
+	title
+	content (contains text and media, images only)
+	tags (can be multiple but must be inside allowed tags only)
+	relevant links
+	comment tree
+
+User attributes
+	projects with access
+	username
+	password
+	icon (not yet)
+	starred blogs
+
+UX
+1. Admin creates a new project. This project will be shown in project gallery.
+2. Admin creates users, the users is given password and username and project access.
+3. Users can change their passwords and usernames and icons.
+4. Users can create and view blogs, they cannot delete but can edit your own authored blogs.
+5. Blogs can be sorted by date, or just view certain type of blog (by tag). 
+6. The blog dates can be set up manually but is prepopulated with the current date.
+7. The blog gallery has a search icon where blogs can be searched.
+8. Blogs can be pinned or starred so that it appears first in the blog gallery.
+9. Other users can comment to blogs, it creates like a graph of messages (comment tree) with max depth of 3 like facebook where you can comment to a post, comment under a comment to a post, and other subsequent comments after that are just at that level 3.
+10. User icons are predefined from a pool of allowed images in a certain folder. Only admin can add to it to save storage.
+11. The images in Blog.content should be low-ressed first to save storage, it can be downloaded.
+
+UI Style
+Soft, rounded, sans-serif, simple, using simple icons like in Google Material Icons or better ones.
+
+
+
+Implementation for creating a user 
+Database!
+
