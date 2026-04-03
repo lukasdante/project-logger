@@ -1,0 +1,13 @@
+name = "project-log-backend"
+main = "src/index.ts"
+compatibility_date = "2026-04-03"
+
+# Point this to your public folder so the website actually loads
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "project-log-db"
+database_id = "9fd11846-7bce-4020-8cbb-7b40af5a9cbd"
