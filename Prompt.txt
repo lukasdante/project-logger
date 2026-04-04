@@ -44,6 +44,6 @@ Soft, rounded, sans-serif, simple, using simple icons like in Google Material Ic
 
 
 
-Implementation for creating a user 
-Database!
-
+Attachment doesn't seem to upload or it can upload but cannot be downloaded or accessed?
+The sort by date is weird! It must sort from left to right! up to down! depending on if it is oldest first or newest first 
+Would be nice to know how many logs are in a project in project gallery 

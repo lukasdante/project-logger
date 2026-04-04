@@ -1,13 +1,19 @@
-name = "project-log-backend"
+name = "project-mango"
 main = "src/index.ts"
-compatibility_date = "2026-04-03"
+compatibility_date = "2024-03-20"
 
-# Point this to your public folder so the website actually loads
-[assets]
-directory = "./public"
-binding = "ASSETS"
+[site]
+bucket = "./public"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "project-log-db"
-database_id = "9fd11846-7bce-4020-8cbb-7b40af5a9cbd"
+database_id = "9f9f3c72-67ee-4f6f-8fbc-9a5e7aa48c77"
+
+[[r2_buckets]]
+binding = "AVATAR_BUCKET"
+bucket_name = "avatar-bucket"
+
+[[r2_buckets]]
+binding = "ATTACHMENT_BUCKET"
+bucket_name = "attachment-bucket"

@@ -55,15 +55,16 @@ body {
 }
 
 .blog-masonry {
-    column-count: 1;
-    column-gap: 1.5rem;
+    display: grid;
+    /* This automatically figures out how many columns fit on the screen! */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
     padding: 0 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    /* This is the magic trick that stops short cards from stretching to match tall cards */
+    align-items: start; 
 }
-
-@media (min-width: 768px) { .blog-masonry { column-count: 2; } }
-@media (min-width: 1024px) { .blog-masonry { column-count: 3; } }
 
 /* Soft Cards */
 .card {
@@ -258,16 +259,25 @@ body {
 }
 
 /* Interactive Pin Button */
+/* --- Pin Button Styles --- */
 .pin-btn {
-    background: none; border: none; cursor: pointer; padding: 0.25rem;
-    color: #cbd5e0; /* Default grey */
-    transition: color 0.2s, transform 0.2s;
-    display: flex; align-items: center; justify-content: center;
-    border-radius: 50%;
+    background: transparent;
+    border: none;
+    color: var(--text-muted); /* Default gray outline */
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.1s ease;
 }
 
-.pin-btn:hover { background: #f8fafc; color: var(--text-muted); }
-.pin-btn.pinned { color: var(--primary); }
+/* Hover effect so they know it's clickable */
+.pin-btn:hover {
+    color: var(--primary); 
+    transform: scale(1.1);
+}
+
+/* The active, pinned state: Solid Blue! */
+.pin-btn.pinned {
+    color: var(--primary); /* Uses your main blue theme color */
+}
 .pin-btn.pinned:hover { color: #3182ce; }
 
 /* Prevent buttons from wrapping to two lines */
